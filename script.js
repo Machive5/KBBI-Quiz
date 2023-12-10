@@ -15,7 +15,6 @@ const fetching = async (kata)=>{
     if (data.ok) {
         let json = await data.json();
         arti = json.data[0].arti[0].deskripsi;
-        console.log(json);
         def.innerHTML = arti;
     } else {
         def.innerHTML = 'tidak dapat ditemukan';
@@ -1482,7 +1481,6 @@ function go() {
     const keys = Object.keys(kata);
     const key = keys[Math.floor(Math.random() * keys.length)];
     const value = kata[key];
-    console.log(key,value);
     def.innerText = "memuat arti..."
     fetching(value);
 
