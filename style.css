@@ -1,0 +1,55 @@
+body{
+    background-color: rgb(236, 236, 236);
+}
+.container{
+    width: 100vw;
+}
+.main{
+    height: calc(30vh + 5vw);
+}
+.definisi{
+    height: auto;
+}
+#a, #b{
+    width: 20%;
+    height: 10vw;
+    background-color: whitesmoke;
+    border: none !important;
+    border-right: 5px solid rgb(17, 17, 17) !important;
+    border-bottom: 5px solid rgb(17, 17, 17) !important;
+    border-left: 2px solid grey !important;
+    border-top: 2px solid grey !important;
+}
+#a:active, #b:active{
+    border-right: 5px solid grey !important;
+    border-bottom: 5px solid grey !important;
+    border-left: 2px solid rgb(17, 17, 17) !important;
+    border-top: 2px solid rgb(17, 17, 17) !important;
+}
+#def{
+    display: none;
+}
+#lanjut{
+    display: none;
+    width: 70px;
+}
+p.text-center{
+    font-size: calc(1rem + 1vw);
+}
+p{
+    font-size: calc(0.7rem + 0.5vw)
+}
+header{
+    width: 100vw;
+    height: 3rem;
+    margin-bottom: 1rem !important;
+    background-color: grey;
+    color: whitesmoke;
+}
+
+@media only screen and (max-width: 425px) {
+    #a, #b{
+        width: 35%;
+        height: 20vw;
+    }
+}
