@@ -1498,25 +1498,25 @@ function go() {
 
 function check(A,B){
     A.addEventListener('click',()=>{
-        A.style.backgroundColor = "rgb(12, 224, 75)";
-        B.style.backgroundColor = "#dc3545";
+        A.style.backgroundColor = "#00b26d";
+        B.style.backgroundColor = "#a4005d";
 
         def.style.display = "block";
         lanjut.style.display = "block";
     })
     B.addEventListener('click',()=>{
-        A.style.backgroundColor = "rgb(12, 224, 75)";
-        B.style.backgroundColor = "#dc3545";
+        A.style.backgroundColor = "#00b26d";
+        B.style.backgroundColor = "#a4005d";
 
         def.style.display = "block";
-        lanjut.style.display = "block";
+        lanjut.style.display = "flex";
 
     });
 }
 
 lanjut.addEventListener('click',()=>{
-    a.style.backgroundColor = "whitesmoke";
-    b.style.backgroundColor = "whitesmoke";
+    a.style.backgroundColor = "#052557";
+    b.style.backgroundColor = "#052557";
 
     def.style.display = "none";
     lanjut.style.display = "none";
