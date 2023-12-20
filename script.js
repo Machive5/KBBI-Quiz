@@ -1495,8 +1495,8 @@ function go() {
         "mala petaka": "malapetaka",
         "kluster": "klaster",
         "aeration": "aerasi",
-        "inveksi": "infeksi"
-    }`
+        "inveksi": "infeksi"}`;
+    
     const kata = JSON.parse(data);
     const keys = Object.keys(kata);
     if (remember.length === keys.length){
