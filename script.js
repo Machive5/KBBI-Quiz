@@ -1,7 +1,8 @@
 const a = document.getElementById("a");
 const b = document.getElementById("b");
-const def = document.getElementById("def");
+const def = document.querySelector(".definisi")
 const lanjut = document.getElementById("lanjut");
+let remember = [];
 
 
 const fetching = async (kata)=>{
@@ -15,12 +16,13 @@ const fetching = async (kata)=>{
     if (data.ok) {
         let json = await data.json();
         arti = json.data[0].arti[0].deskripsi;
-        def.innerHTML = arti;
+        def.querySelector("#def").innerHTML = arti;
     } else {
-        def.innerHTML = 'tidak dapat ditemukan';
+        def.querySelector("#def").innerHTML = 'tidak dapat ditemukan';
     }
 }
 
+window.scrollX = `(${(window.innerWidth/657) * (15/2)}`;
 go();
 
 function go() {
@@ -1476,12 +1478,42 @@ function go() {
         "judisial": "yudisial",
         "jurisdiksi": "yurisdiksi",
         "jamrud": "zamrud",
-        "zigzag": "zig-zag"}`
+        "zigzag": "zig-zag",
+        "barang kali": "barangkali",
+        "bhineka": "bineka",
+        "terlatar": "telantar",
+        "yunior": "junior",
+        "mempengaruhi": "memengaruhi",
+        "literasy": "literasi",
+        "seringkali": "sering kali",
+        "sosial media": "media sosial",
+        "pengkikisan": "pengikisan",
+        "ilmuan": "ilmuwan",
+        "mengkonsumsi": "mengonsumsi",
+        "berpergian": "bepergian",
+        "memerhatikan": "memperhatikan",
+        "mala petaka": "malapetaka",
+        "kluster": "klaster",
+        "aeration": "aerasi",
+        "inveksi": "infeksi",
+        
+    }`
     const kata = JSON.parse(data);
     const keys = Object.keys(kata);
-    const key = keys[Math.floor(Math.random() * keys.length)];
+    if (remember.length === keys.length){
+        remember = [];
+    }
+
+    let i = Math.floor(Math.random() * keys.length);
+    while (remember.includes(i)){
+        i = Math.floor(Math.random() * keys.length);
+    }
+    remember.push(i);
+
+    let key = keys[i];
     const value = kata[key];
-    def.innerText = "memuat arti..."
+
+    def.querySelector("#def").innerText = "memuat arti..."
     fetching(value);
 
     if ((Math.random() * 1)<0.5) {
@@ -1501,14 +1533,14 @@ function check(A,B){
         A.style.backgroundColor = "#00b26d";
         B.style.backgroundColor = "#a4005d";
 
-        def.style.display = "block";
-        lanjut.style.display = "block";
+        def.style.display = "flex";
+        lanjut.style.display = "flex";
     })
     B.addEventListener('click',()=>{
         A.style.backgroundColor = "#00b26d";
         B.style.backgroundColor = "#a4005d";
 
-        def.style.display = "block";
+        def.style.display = "flex";
         lanjut.style.display = "flex";
 
     });

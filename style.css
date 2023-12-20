@@ -1,52 +1,64 @@
 body{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #052557 !important;
     width: 100vw;
     height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 .container, .main{
-    width: 100vw !important;
+    width: 100vw;
     z-index: 99;
     background-color: #052557;
     border-radius: 36px 36px 0% 0%;
+    box-sizing: border-box;
 }
 .option{
     height: auto;
     margin-top: 5%;
 }
 .definisi{
+    display: none;
     height: auto;
+    margin: 0px !important;
+    padding: 0px !important;
+    margin-top: 7% !important;
+    align-items: center;
+    min-width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
 }
 #a, #b{
     width: 20%;
-    height: 14vw;
+    height: 12vw;
     background-color: #052557;
-    border: 0.7vw solid #001538;
+    border: 0.5vw solid #001538;
     box-shadow: 0.7vw 0.7vw #001538;
     border-radius: 25px;
     color: whitesmoke;
     position: relative;
-    font-size: calc(1rem + 1vw);
+    font-size: calc(0.5rem + 1vw);
 }
 #a:active, #b:active{
     width: 19%;
-    height: 13vw;
+    height: 11vw;
 }
 #def{
-    display: none;
+    display: flex;
     font-size: calc(0.7rem + 0.5vw);
     color: whitesmoke;
-    width: 90%;
+    width: 80%;
     height: auto;
-    margin: 0% 5% 0% 5%; 
-    margin-top: 7%;
-    padding-left: 3%;
     border-left: 2px solid whitesmoke;
+    padding-left: 3%;
     box-sizing: border-box;
-
 }
 #lanjut{
     display: none;
-    width: 14vw;
+    width: 18vw;
     border: none;
     border-radius: 30vw;
     background-color: #4200ff;
@@ -68,9 +80,9 @@ p.text-center{
 }
 header{
     width: 100vw;
-    height: 5rem;
+    height: 8rem;
     margin: 0%;
-    margin-bottom: -1rem !important;
+    margin-bottom: -3rem !important;
     background-color: #00183F;
     color: whitesmoke;
     display: flex;
@@ -79,7 +91,7 @@ header{
     justify-content: center;
 }
 header h1{
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     height: auto;
     font-size: calc(1.2rem + 1.3vw);
     font-weight: bold;
@@ -91,7 +103,8 @@ header h1{
         height: 30vw;
         border: 1.3vw solid #001538;
         box-shadow: 1.4vw 1.4vw #001538;
-        border-radius: 10px;
+        border-radius: 20px;
+        font-size: calc(0.9rem + 1vw);
     }
     #a:active, #b:active{
         width: 39%;
@@ -102,18 +115,45 @@ header h1{
         margin-top: 10%;
     }
     #def{
-        margin-top: 15%;
+        margin-top: 10%;
+        font-size: calc(0.8rem + 1vw);
     }
     #lanjut{
         display: none;
         width: 35vw;
-        margin-top: 15%;
+        margin-top: 17%;
         box-shadow: 1vw 1.5vw #001538;
+        font-size: calc(1.2rem + 0.5vw);
     }
     header{
-        margin-bottom: -2rem !important;
+        margin-bottom: -4rem !important;
     }
     header h1{
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
+    }
+}
+
+@media only screen and (max-width: 820px) and (min-width: 431px){
+    #a, #b{
+        width: 30%;
+        height: 20vw;
+        border: 1vw solid #001538;
+        box-shadow: 1.1vw 1.1vw #001538;
+        border-radius: 25px;
+        font-size: calc(0.9rem + 1vw);
+    }
+    #a:active, #b:active{
+        width: 29%;
+        height: 19vw;
+    }
+    #lanjut{
+        display: none;
+        width: 30vw;
+        margin-top: 15%;
+        box-shadow: 1vw 1.5vw #001538;
+        font-size: calc(1.5rem + 0.5vw);
+    }
+    #def{
+        font-size: calc(1rem + 0.5vw);
     }
 }
