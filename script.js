@@ -529,7 +529,7 @@ function go() {
         "hingar": "ingar",
         "hingar-bingar": "ingar-bingar",
         "income": "inkam",
-        "Ingkarsunah sunah": "inkarsunah",
+        "Ingkar sunah": "inkarsunah",
         "inkar sunah": "inkarsunah",
         "incognito": "inkognito",
         "innalillahiwa innalillahi roji'un": "innalillahi wa innalillahi rajiun",
